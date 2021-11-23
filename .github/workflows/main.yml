@@ -34,7 +34,7 @@ jobs:
         uses: jiro4989/setup-nim-action@v1.1.4
       
       - name: Install Nim dependencies
-        run: yes | nimble install shlex regex
+        run: nimble -y install shlex regex
 
       - name: Compile c
         run: nim -d:release c c.nim

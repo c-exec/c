@@ -3,6 +3,13 @@
 
 Compiling, including, linking, making is old-school. For simple projects, rather use `c` - an intuitive automatic compilation and execution engine built with simplicity and completeness in mind.
 
+### Setup
+MacOS is currently not supported. For Windows, just download the latest build from the
+GitHub releases section and configure Windows to use `c.exe` as a default handler for `.c` files.
+
+On Linux, make sure you have `update-binfmts` installed. Then execute
+`curl https://github.com/c-exec/c/setup.sh | sudo sh`
+
 ### Example
 
 Once installed, you will be able to run
@@ -11,7 +18,6 @@ Once installed, you will be able to run
 
 which will automatically
 
-- 
 - search for includes
 - compile the corresponding .c files and the main .c file itself
 - execute the resulting program
@@ -24,12 +30,6 @@ On Linux, you can achieve this using `update-binfmts`. Note that the setup scrip
 `chmod +x your_code.c` once.  
 `./your_code.c` to execute your C program.
 
-### Setup
-MacOS is currently not supported. For Windows, just download the latest build from the
-GitHub releases section and configure Windows to use `c.exe` as a default handler for `.c` files.
-
-On Linux, make sure you have `update-binfmts` installed. Then execute
-`curl https://github.com/c-exec/c/setup.sh | sudo sh`
 
 ### Command line parameters and compiler options
 
