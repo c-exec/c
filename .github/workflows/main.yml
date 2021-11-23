@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: C-Exec Build
 
 # Controls when the workflow will run
 on:
@@ -36,7 +34,7 @@ jobs:
         uses: jiro4989/setup-nim-action@v1.1.4
       
       - name: Install Nim dependencies
-        run: nimble install shlex regex
+        run: yes | nimble install shlex regex
 
       - name: Compile c
         run: nim -d:release c.nim
