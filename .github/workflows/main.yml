@@ -37,7 +37,7 @@ jobs:
         run: yes | nimble install shlex regex
 
       - name: Compile c
-        run: nim -d:release c.nim
+        run: nim -d:release c c.nim
         
       - name: Publish c release
         uses: fnkr/github-action-ghr@v1
