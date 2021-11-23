@@ -45,6 +45,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./${{ matrix.OUTPUT }}
+          asset_name: ${{ matrix.OUTPUT }}
           tag: ${{ github.ref }}
           overwrite: true
           body: "The latest release."
