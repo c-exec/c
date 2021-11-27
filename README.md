@@ -4,11 +4,17 @@
 Compiling, including, linking, making is old-school. For simple projects, rather use `c` - an intuitive automatic compilation and execution engine built with simplicity and completeness in mind.
 
 ### Setup
+_Clang is assumed to be installed on your computer and in your PATH. If you prefer GCC, head over to the [Compiler path and default compiler options section](#compiler-path-and-default-compiler-options) and change the configured command to `gcc`._
+
 MacOS is currently not supported. For Windows, just download the latest build from the
 GitHub releases section and configure Windows to use `c.exe` as a default handler for `.c` files.
 
 On Linux, make sure you have `update-binfmts` installed. Then execute  
-`curl https://raw.githubusercontent.com/c-exec/c/master/setup.sh | sudo sh`
+`sudo sh -c "curl https://raw.githubusercontent.com/c-exec/c/master/setup.sh | sh"`
+
+### Updates
+On Linux, just re-run the setup command line above. For Windows, you can download the latest
+`c.exe` from GitHub's releases section and replace the currently installed one on your system.
 
 # Example
 
@@ -40,7 +46,7 @@ or `./your_code.c parameter1 parameter2 -- -Wall -o custom_output_name.bin`
 
 ## Includes
 
-`c` uses the compiler to analyze includes. It finds "includes of includes" and handles conditional includes (`via IFDEF` for instance) correctly. It's assumed that the corresponding
+`c` uses the system C compiler to analyze includes. It finds "includes of includes" and handles conditional includes (via `IFDEF` for instance) correctly. It's assumed that the corresponding
 `.c` source code file for a `.h` include header is inside the same directory with the `.h` extension exchanged for a `.c`.
 
 If no corresponding source code file can be found, a warning is issued and it's likely that the compilation fails.
