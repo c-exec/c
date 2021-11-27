@@ -7,7 +7,7 @@ Compiling, including, linking, making is old-school. For simple projects, rather
 MacOS is currently not supported. For Windows, just download the latest build from the
 GitHub releases section and configure Windows to use `c.exe` as a default handler for `.c` files.
 
-On Linux, make sure you have `update-binfmts` installed. Then execute
+On Linux, make sure you have `update-binfmts` installed. Then execute  
 `curl https://raw.githubusercontent.com/c-exec/c/master/setup.sh | sudo sh`
 
 # Example
