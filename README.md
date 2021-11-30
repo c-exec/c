@@ -3,6 +3,12 @@
 
 Compiling, including, linking, making is old-school. For simple projects, rather use `c` - an intuitive automatic compilation and execution engine built with simplicity and completeness in mind.
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/c-exec/c?label=latest%20c%20release)
+![GitHub top language](https://img.shields.io/github/languages/top/c-exec/c)
+![Lines of code](https://img.shields.io/tokei/lines/github/c-exec/c?label=source%20lines)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/c-exec/c/C-Exec%20Build%20&%20Release)
+![GitHub all releases](https://img.shields.io/github/downloads/c-exec/c/total)
+
 ### Setup
 _Clang is assumed to be installed on your computer and in your PATH. If you prefer GCC, head over to the [Compiler path and default compiler options section](#compiler-path-and-default-compiler-options) and change the configured command to `gcc`._
 
@@ -11,6 +17,8 @@ GitHub releases section and configure Windows to use `c.exe` as a default handle
 
 On Linux, make sure you have `update-binfmts` installed. Then execute  
 `sudo sh -c "curl https://raw.githubusercontent.com/c-exec/c/master/setup.sh | sh"`
+
+When the installation succeeded, try executing `c` in your terminal to get version information and a short help message.
 
 ### Updates
 On Linux, just re-run the setup command line above. For Windows, you can download the latest
@@ -59,7 +67,7 @@ This file is just an ordinary shell command line instruction, defaulting to exec
 # Useful features
 
 #### Print the exit code
-Too lazy to manually check your program's exit code? Issue the **compiler** parameter (meaning, after the ` -- `) `-pc` to get it printed to stdout. This flag may also be added to ~/.c_command.rc .
+Too lazy to manually check your program's exit code? Issue the **compiler** parameter (meaning, after the ` -- `) `-Dpc` to get it printed to stdout. This flag may also be added to ~/.c_command.rc .
 
 #### Keep the console open
-This is especially useful for Windows which autocloses console windows opened with a double-click. Issue the **compiler** parameter (meaning, after the ` -- `) `-kt` to **k** eep the **t** erminal open. This flag may also be added to ~/.c_command.rc .
+This is especially useful for Windows which autocloses console windows opened with a double-click. Issue the **compiler** parameter (meaning, after the ` -- `) `-Dkt` to **k** eep the **t** erminal open. This flag may also be added to ~/.c_command.rc .
